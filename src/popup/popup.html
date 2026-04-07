@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup">
+    <header>
+      <span class="title">AWS Login Helper</span>
+      <label class="toggle">
+        <input type="checkbox" id="enabled">
+        <span class="toggle-slider"></span>
+      </label>
+    </header>
+
+    <div id="notConfigured" class="state" style="display:none;">
+      <p class="message">Extension not configured yet.</p>
+      <button id="openSettingsTop" class="btn btn-primary btn-full">Open Settings</button>
+    </div>
+
+    <div id="notAwsPage" class="state" style="display:none;">
+      <p class="message">Not on an AWS console page.</p>
+    </div>
+
+    <div id="disabled" class="state" style="display:none;">
+      <p class="message">Extension is disabled.</p>
+    </div>
+
+    <div id="detection" class="state" style="display:none;">
+      <div class="info-row">
+        <span class="info-label">Portal</span>
+        <span class="info-value" id="portalDisplay"></span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Role</span>
+        <span class="info-value" id="roleDisplay"></span>
+      </div>
+      <hr>
+      <div class="detection-result">
+        <div class="info-row">
+          <span class="info-label">Account</span>
+          <span class="info-value" id="accountDisplay">--</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Label</span>
+          <span class="info-value" id="labelDisplay">--</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Confidence</span>
+          <span class="badge" id="confidenceBadge">--</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Source</span>
+          <span class="info-value" id="sourceDisplay">--</span>
+        </div>
+      </div>
+      <button id="redirectNow" class="btn btn-primary btn-full">Redirect Now</button>
+    </div>
+
+    <div id="quickSwitch" style="display:none;">
+      <hr>
+      <p class="section-title">Quick Switch</p>
+      <div id="accountList"></div>
+    </div>
+
+    <footer>
+      <button id="openSettings" class="btn btn-link">Settings</button>
+    </footer>
+  </div>
+
+  <script src="../shared/constants.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

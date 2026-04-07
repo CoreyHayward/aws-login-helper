@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  color: #1a1a1a;
+  width: 320px;
+}
+
+.popup {
+  padding: 12px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #232f3e;
+}
+
+/* Toggle switch */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: #ccc;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+.toggle-slider::before {
+  content: '';
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.toggle input:checked + .toggle-slider {
+  background: #ff9900;
+}
+
+.toggle input:checked + .toggle-slider::before {
+  transform: translateX(16px);
+}
+
+/* States */
+.state {
+  margin-bottom: 8px;
+}
+
+.message {
+  color: #666;
+  text-align: center;
+  padding: 8px 0;
+}
+
+/* Info rows */
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 0;
+}
+
+.info-label {
+  color: #666;
+  font-size: 12px;
+}
+
+.info-value {
+  font-weight: 500;
+  font-size: 12px;
+  color: #111;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 8px 0;
+}
+
+.detection-result {
+  margin-bottom: 10px;
+}
+
+/* Badge */
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.badge.high {
+  background: #e6f7e6;
+  color: #1a8c1a;
+}
+
+.badge.medium {
+  background: #fff8e6;
+  color: #b37a00;
+}
+
+.badge.low {
+  background: #f0f0f0;
+  color: #666;
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 7px 12px;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.btn-primary {
+  background: #ff9900;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #ec8c04;
+}
+
+.btn-primary:disabled {
+  background: #ccc;
+  cursor: default;
+}
+
+.btn-account {
+  width: 100%;
+  text-align: left;
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 6px 10px;
+  margin-bottom: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-account:hover {
+  background: #eee;
+  border-color: #ff9900;
+}
+
+.btn-account .account-label {
+  font-weight: 500;
+}
+
+.btn-account .account-id {
+  color: #666;
+  font-size: 11px;
+}
+
+.btn-link {
+  background: none;
+  color: #0073bb;
+  padding: 4px 0;
+  font-size: 12px;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+/* Section title */
+.section-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+footer {
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* --- Dark mode --- */
+
+@media (prefers-color-scheme: dark) {
+  body { background: #161b22; color: #e0e0e0; }
+
+  .popup { background: #161b22; }
+
+  .title { color: #ff9900; }
+
+  .toggle-slider { background: #3d444d; }
+  .toggle-slider::before { background: #ccc; }
+  .toggle input:checked + .toggle-slider { background: #ff9900; }
+  .toggle input:checked + .toggle-slider::before { background: #fff; }
+
+  .message { color: #8b949e; }
+
+  .info-label { color: #8b949e; }
+  .info-value { color: #e0e0e0; }
+
+  hr { border-top-color: #333b44; }
+
+  .badge.high { background: rgba(26, 140, 26, 0.2); color: #66cc66; }
+  .badge.medium { background: rgba(179, 122, 0, 0.2); color: #ffcc66; }
+  .badge.low { background: rgba(100, 100, 100, 0.2); color: #8b949e; }
+
+  .btn-primary { background: #ff9900; color: #111; }
+  .btn-primary:hover { background: #ffad33; }
+  .btn-primary:disabled { background: #2d333b; color: #6b7280; }
+
+  .btn-account {
+    background: #1c2128; border-color: #333b44; color: #e0e0e0;
+  }
+  .btn-account:hover { background: #222830; border-color: #ff9900; }
+  .btn-account .account-id { color: #8b949e; }
+
+  .btn-link { color: #58a6ff; }
+
+  .section-title { color: #8b949e; }
+}
