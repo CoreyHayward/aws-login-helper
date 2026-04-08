@@ -60,3 +60,7 @@ src/
 ## Privacy
 
 All data stays in local Chrome storage. Nothing is sent externally. The extension only has access to AWS console and portal domains.
+
+## Support
+
+If AccountHop makes your day a little easier and you want to help support future improvements, [buy me a coffee](https://buymeacoffee.com/coreyhayward).
