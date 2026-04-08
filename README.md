@@ -17,7 +17,7 @@ You need three things:
 |---------|---------|-------|
 | **Portal URL** | `mycompany.awsapps.com` | Just the hostname, no `https://` |
 | **Default Role** | `Developer` | The permission set name from your portal |
-| **Account Mappings** | `prod` → `123456789012` | Keywords that map URLs to accounts |
+| **Account Mappings (Optional)** | `prod` → `123456789012` | Keywords that map URLs to accounts |
 
 Each mapping has: **Keyword**, **Account ID**, **Label**, and an optional **Role Override** (if that account uses a different permission set than the default).
 
