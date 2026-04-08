@@ -41,22 +41,6 @@ The extension automatically remembers accounts it encounters:
 
 Learned accounts show up in the chooser and popup but **never auto-redirect** — only explicit URL detection and keyword mappings do that.
 
-## Project Structure
-
-```
-src/
-  manifest.json
-  background/service-worker.js    Navigation interception + redirect logic
-  content/content.js              Account chooser banner + 403 detection
-  content/portal-scraper.js       Portal account import
-  shared/constants.js             Shared config + utilities
-  shared/storage.js               Chrome storage wrappers
-  shared/account-detector.js      Account detection pipeline
-  popup/                          Extension popup
-  options/                        Settings page
-  icons/
-```
-
 ## Privacy
 
 All data stays in local Chrome storage. Nothing is sent externally. The extension only has access to AWS console and portal domains.
