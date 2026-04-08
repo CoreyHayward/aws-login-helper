@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "AWS Login Helper",
+  "name": "AccountHop for AWS",
   "version": "1.0.0",
   "description": "Automatically redirects AWS console URLs through your company's AWS access portal to open resources in the correct account context.",
   "permissions": [

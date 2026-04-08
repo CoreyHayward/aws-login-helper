@@ -252,14 +252,14 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     const result = handler(message, sender);
     if (result && typeof result.then === 'function') {
       result.then(sendResponse).catch((err) => {
-        console.error(`[AWS Login Helper] ${message.type}:`, err);
+        console.error(`[AccountHop for AWS] ${message.type}:`, err);
         sendResponse({ error: err.message });
       });
       return true; // keep message channel open for async response
     }
     sendResponse(result);
   } catch (err) {
-    console.error(`[AWS Login Helper] ${message.type}:`, err);
+    console.error(`[AccountHop for AWS] ${message.type}:`, err);
     sendResponse({ error: err.message });
   }
 });

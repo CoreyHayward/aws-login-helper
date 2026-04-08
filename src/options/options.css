@@ -268,6 +268,66 @@ tbody td input:focus {
   font-weight: 500;
 }
 
+.donation-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 24px;
+  font-size: 13px;
+  color: #666;
+}
+
+.donation-note p {
+  margin: 0;
+}
+
+.donate-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #fff7e6;
+  text-decoration: none;
+}
+
+.donate-link:hover {
+  background: #ffefcc;
+}
+
+.donate-link img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.donate-text-link {
+  color: #0073bb;
+  text-decoration: none;
+}
+
+.donate-text-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 520px) {
+  .donation-note {
+    gap: 12px;
+  }
+
+  .donate-link {
+    width: 32px;
+    height: 32px;
+  }
+
+  .donate-link img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 /* --- Dark mode --- */
 
 @media (prefers-color-scheme: dark) {
@@ -323,6 +383,10 @@ tbody td input:focus {
   .source-badge.portal-import { background: rgba(0, 85, 170, 0.2); color: #58a6ff; }
 
   .status { color: #66cc66; }
+  .donation-note { color: #8b949e; }
+  .donate-link { background: rgba(255, 153, 0, 0.12); }
+  .donate-link:hover { background: rgba(255, 153, 0, 0.22); }
+  .donate-text-link { color: #58a6ff; }
 
   code { color: #ffad33; }
 }

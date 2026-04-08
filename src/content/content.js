@@ -89,7 +89,7 @@
       </style>
       <div class="banner">
         <div class="text">
-          <strong>AWS Login Helper</strong> &mdash; Choose an account to redirect through the portal.
+          <strong>AccountHop for AWS</strong> &mdash; Choose an account to redirect through the portal.
           <div class="info">${info}</div>
         </div>
         <select id="sel"><option value="">Select account...</option>${options}</select>
