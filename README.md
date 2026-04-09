@@ -4,6 +4,10 @@ A Chrome extension that redirects AWS console links through your company's SSO p
 
 ## Install
 
+Install from the chrome extensions store: [AccountHop for AWS](https://chromewebstore.google.com/detail/mlkmbmoehpnifbllgklomdjjoiaifmjm?utm_source=item-share-cb)
+
+OR
+
 1. Clone this repo
 2. Open `chrome://extensions`, enable **Developer mode**
 3. **Load unpacked** → select the `src/` directory
