@@ -2,6 +2,12 @@
 
 A Chrome extension that redirects AWS console links through your company's SSO portal so you land in the correct account — no more 403s.
 
+## Demo
+
+[![Watch the AccountHop demo](./images/AccountHop-thumbnail.PNG)](https://youtu.be/mW5gblS45G8)
+
+See AccountHop detect the target AWS account from the URL and redirect through IAM Identity Center so the correct console resource opens without manual account switching.
+
 ## Install
 
 Install from the chrome extensions store: [AccountHop for AWS](https://chromewebstore.google.com/detail/mlkmbmoehpnifbllgklomdjjoiaifmjm?utm_source=item-share-cb)
